@@ -1,0 +1,57 @@
+body{
+    background-image: url(https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-stained-glass-free-website-background-image.jpg);
+}
+
+.a{
+    width: 400px;
+    background-color: rgba(0,0,0,.5);
+    margin-left:550px;
+    color:white;
+    padding:0px 20px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.a h1{
+    text-align: center;
+    color:rgb(255, 255, 0);
+}
+.b{
+    display:block;
+}
+.i input{
+  width: 100%;
+  font-size: 1.0em;
+  border: 3px solid grey;
+  box-shadow: 2px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin:0px 0px;
+}
+input:focus{
+    background-color: bisque;
+}
+.btn{
+    text-align: center;
+}
+button{
+    background-color: rgb(238, 9, 208);
+    font-size: 20px;
+    color:rgb(26, 11, 240);
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid blue;
+    box-shadow: 2px;
+
+}
+button:hover{
+    color: azure;
+}
+
+.radio input{
+    color:rgb(0, 255, 140);
+    transform: scale(1.5);
+}
+span{
+    color: red;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    
+    <div class="a">
+        <h1>Registration Form</h1>
+            <div class="i">
+                <label class="b" for="name">Name<span> *</span></label>
+                <input type="text" id="name" onblur="check1()"><p id="u" style="color: red;"></p>
+            </div>
+            <div class="i">
+                <label class="b" for="ph">Phone No</label>
+                <input type="number" id="ph" onblur="check1()"><p id="u" style="color: red;"></p>
+            </div>
+            <div class="i">
+                <label class="b" for="dob">Date Of Birth</label>
+                <input type="date" id="dob" onblur="check1()"><p id="u" style="color: red;"></p>
+            </div>
+            <div class="i">
+                <label class="b" for="email">Email</label>
+                <input type="email" id="email" onblur="check1()"><p  style="color: red;" id="e"></p>
+            </div>
+            <div class="i">
+                <label class="b" for="pwd">Password</label>
+                <input type="password" id="pwd" onblur="check2()"><p  style="color: red;" id="abc"></p>
+            </div>
+<div class="radio">
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female" value="male">
+    <label for="female">Female</label>
+</div>
+<br>
+<div class="i">
+    <label class="b" for="add">Address</label>
+    <input type="text" id="add" onblur="check3()"><p  style="color: red;" id="abc"></p>
+</div>
+<div class="i">
+    <label class="b" for="code">Pincode</label>
+    <input type="text" name="code" id="pin" onBlur="check4()"><p  style="color: red;" id="abc"></p>
+</div>
+<div class="btn">
+    <input TYPE="BUTTON" VALUE="Display" onClick="display()">
+</div>
+<div class="btn" style="display: block;">
+    <input type="reset" value="Reset" onClick="clear()">
+</div>
+<div class="btn">
+    <button type="submit" onclick="validateForm()">Submit</button>
+</div>
+
+
+<script>
+   function validateForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('pwd').value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+        if (name === '' || email === '' || password === '' || gender === null ) {
+            alert('Please fill in all fields.');
+            return false;
+        }
+        alert('Form submitted successfully.');
+        return true;
+    }
+
+function check()
+{
+u.innerText="";
+var name1=document.getElementById("name").value;
+			if(name1.length<1)
+				{
+				u.innerText="*Field should be filled";
+				}
+}
+function check1()
+{
+e.innerText="";
+var email1=document.getElementById("email").value;
+			if(email1.length<1)
+				{
+				e.innerText="*Field should be filled";
+				}
+}
+function check2()
+{
+abc.innerText="";
+var passone = document.getElementById("pwd");
+var invalid = " ";
+			if(passone.value == "")
+				{
+				abc.innerText="*Field should be filled";
+				}
+			else if(passone.value.length < 6)
+				{
+				abc.innerText='*password must be at least 6 characters long';
+				}
+}
+</script>
+</body>
+</html>
